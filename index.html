@@ -3,70 +3,272 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EL MANUAL DEL PLR - El Código Brasileño Revelado</title>
+    <title>Código Divino | Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Anton&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              neon: {
-                green: '#39FF14',
-                blue: '#00F0FF',
-              },
-              brand: {
-                black: '#000000',
-                navy: '#0A192F',
-                gold: '#FFD700',
-              }
+              ink: "#1E293B",
+              mist: "#F8FAFC",
+              noble: "#D4AF37",
+              skydeep: "#0EA5E9",
             },
             fontFamily: {
-              sans: ['Montserrat', 'sans-serif'],
-              display: ['Anton', 'sans-serif'],
+              sans: ["Inter", "Montserrat", "sans-serif"],
+              display: ["Playfair Display", "serif"],
             },
-            backgroundImage: {
-              'cyber-grid': "linear-gradient(to right, #1f2937 1px, transparent 1px), linear-gradient(to bottom, #1f2937 1px, transparent 1px)",
-            }
-          }
-        }
-      }
+            boxShadow: {
+              soft: "0 20px 60px rgba(15, 23, 42, 0.1)",
+            },
+          },
+        },
+      };
     </script>
     <style>
-      body {
-        background-color: #000000;
-        color: #ffffff;
-        overflow-x: hidden;
+      .hero-gradient {
+        background: radial-gradient(
+            circle at top,
+            rgba(14, 165, 233, 0.15),
+            transparent 60%
+          ),
+          linear-gradient(135deg, rgba(212, 175, 55, 0.12), transparent 65%);
       }
-      .glow-text {
-        text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+      .cta-pulse {
+        animation: pulse 2.5s ease-in-out infinite;
       }
-      .glow-box {
-        box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
-      }
-      .gold-glow {
-        text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-      }
-      @keyframes shimmer {
+      @keyframes pulse {
+        0%,
         100% {
-          transform: translateX(100%);
+          transform: scale(1);
+          box-shadow: 0 0 0 rgba(212, 175, 55, 0.4);
+        }
+        50% {
+          transform: scale(1.02);
+          box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
         }
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body>
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+  </head>
+  <body class="bg-white text-ink font-sans">
+    <main class="overflow-hidden">
+      <section class="hero-gradient">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6 py-14 sm:py-16 lg:py-24">
+          <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div class="space-y-6">
+              <span class="inline-flex items-center gap-2 rounded-full bg-mist px-4 py-2 text-xs sm:text-sm font-semibold text-ink">
+                <i class="fa-solid fa-sun text-noble"></i>
+                Espiritualidad moderna para tu día a día
+              </span>
+              <h1 class="text-3xl leading-tight sm:text-4xl lg:text-5xl font-display text-ink">
+                Desbloquea tus 14 Códigos Espirituales para Vivir con Paz, Propósito y Prosperidad
+              </h1>
+              <p class="text-base sm:text-lg text-slate-600">
+                Una guía práctica de 5 minutos al día para activar tu fe, abundancia y propósito, inspirada en principios bíblicos.
+              </p>
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <a
+                  href="#"
+                  class="cta-pulse inline-flex w-full items-center justify-center rounded-full bg-noble px-6 py-4 text-center text-xs sm:text-sm font-bold uppercase tracking-wide text-white shadow-soft transition hover:bg-amber-500 sm:w-auto"
+                >
+                  QUIERO DESBLOQUEAR MIS CÓDIGOS POR $6.90
+                </a>
+                <div class="flex items-center gap-3 text-sm text-slate-500">
+                  <i class="fa-solid fa-lock text-skydeep"></i>
+                  Pago seguro · Acceso inmediato
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="rounded-3xl bg-white shadow-soft p-6 sm:p-8 border border-slate-100">
+                <div class="aspect-[4/5] w-full rounded-2xl bg-slate-200 text-slate-500 flex items-center justify-center text-base sm:text-lg font-semibold">
+                  Mockup Product
+                </div>
+                <div class="mt-6 space-y-4">
+                  <div class="flex items-start gap-3">
+                    <div class="h-10 w-10 rounded-full bg-mist flex items-center justify-center">
+                      <i class="fa-solid fa-seedling text-skydeep"></i>
+                    </div>
+                    <p class="text-sm text-slate-600">
+                      Descubre códigos espirituales prácticos que cambian hábitos, pensamiento y resultados.
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div class="h-10 w-10 rounded-full bg-mist flex items-center justify-center">
+                      <i class="fa-solid fa-dove text-noble"></i>
+                    </div>
+                    <p class="text-sm text-slate-600">
+                      Ritual diario de 5 minutos para construir paz interior y claridad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -top-6 -right-6 h-20 w-20 rounded-full bg-noble/20 blur-2xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-display text-ink">
+              ¿Sientes que tus oraciones chocan contra el techo?
+            </h2>
+            <p class="text-base sm:text-lg text-slate-600">
+              ¿La ansiedad y la falta de propósito consumen tu mente? Quizás tienes fe, pero no sabes cómo aplicarla en el día a día. Miles de personas se encuentran estancadas espiritualmente porque no poseen un método simple y práctico.
+            </p>
+          </div>
+          <div class="mt-10 grid gap-6 sm:grid-cols-3">
+            <div class="rounded-2xl border border-slate-100 p-6 text-center">
+              <i class="fa-solid fa-triangle-exclamation text-noble text-2xl"></i>
+              <p class="mt-3 text-sm text-slate-600">Ansiedad constante</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 p-6 text-center">
+              <i class="fa-solid fa-cloud text-skydeep text-2xl"></i>
+              <p class="mt-3 text-sm text-slate-600">Falta de propósito</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 p-6 text-center">
+              <i class="fa-solid fa-ban text-noble text-2xl"></i>
+              <p class="mt-3 text-sm text-slate-600">Bloqueo espiritual</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-mist">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+          <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div class="rounded-3xl bg-white p-6 sm:p-8 shadow-soft">
+              <div class="aspect-[4/5] rounded-2xl bg-slate-200 text-slate-500 flex items-center justify-center text-base sm:text-lg font-semibold">
+                Mockup Product
+              </div>
+            </div>
+            <div class="space-y-6">
+              <h2 class="text-3xl sm:text-4xl font-display text-ink">Presentamos: El Código Divino</h2>
+              <p class="text-base sm:text-lg text-slate-600">
+                Un libro digital profundo y práctico que revela 14 llaves espirituales capaces de transformar tu fe, tu mentalidad y tu vida diaria. Cada código se explica de manera clara, con aplicación práctica y decretos espirituales.
+              </p>
+              <ul class="space-y-4 text-slate-600">
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-circle-check text-noble mt-1"></i>
+                  <span>El <strong class="text-ink">Código de la Palabra</strong>: Tus palabras son semillas que crean realidades.</span>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fa-solid fa-circle-check text-noble mt-1"></i>
+                  <span>El <strong class="text-ink">Código del Amor</strong>: Una decisión que sana y atrae bendiciones.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="max-w-6xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+          <div class="text-center space-y-4">
+            <h2 class="text-3xl sm:text-4xl font-display text-ink">Beneficios que sentirás desde el primer día</h2>
+            <p class="text-base sm:text-lg text-slate-600">Transformaciones reales en mente, corazón y propósito.</p>
+          </div>
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-2xl border border-slate-100 p-6 shadow-soft bg-white">
+              <i class="fa-solid fa-spa text-noble text-2xl"></i>
+              <p class="mt-4 font-semibold text-ink">Paz Interior y Claridad Mental.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 p-6 shadow-soft bg-white">
+              <i class="fa-solid fa-gem text-skydeep text-2xl"></i>
+              <p class="mt-4 font-semibold text-ink">Vivir en Gratitud y Abundancia.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 p-6 shadow-soft bg-white">
+              <i class="fa-solid fa-people-group text-noble text-2xl"></i>
+              <p class="mt-4 font-semibold text-ink">Relaciones Fortalecidas (Familia y Amigos).</p>
+            </div>
+            <div class="rounded-2xl border border-slate-100 p-6 shadow-soft bg-white">
+              <i class="fa-solid fa-compass text-skydeep text-2xl"></i>
+              <p class="mt-4 font-semibold text-ink">Propósito y Confianza Divina.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-mist">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+          <div class="rounded-3xl bg-white p-6 sm:p-8 shadow-soft">
+            <h2 class="text-2xl sm:text-4xl font-display text-ink">Lo que recibes hoy:</h2>
+            <ul class="mt-6 space-y-4 text-slate-600">
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                14 Códigos Espirituales Explicados.
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                Aplicaciones Prácticas para tu rutina.
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                Afirmaciones Diarias para reprogramar tu mente.
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                Ejercicios Devocionales de conexión.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="max-w-4xl mx-auto px-5 sm:px-6 py-14 sm:py-16 text-center">
+          <h2 class="text-3xl sm:text-4xl font-display text-ink">¿Por qué ahora?</h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Vivimos tiempos de incertidumbre. Nunca hubo tanta ansiedad como hoy. El Código Divino es el atajo que necesitas. Cuanto antes apliques estos códigos, más rápido verás frutos en tu fe, tu familia y tus finanzas.
+          </p>
+        </div>
+      </section>
+
+      <section class="bg-mist">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+          <div class="rounded-3xl border-2 border-noble bg-white p-6 sm:p-10 text-center shadow-soft">
+            <p class="text-sm uppercase tracking-widest text-slate-500">Valor Real: <span class="line-through">$47 USD</span></p>
+            <h2 class="mt-4 text-2xl sm:text-4xl font-display text-ink">Queremos probarte nuestro valor y construir una relación a largo plazo. Por eso, bajamos la barrera de entrada.</h2>
+            <p class="mt-6 text-3xl sm:text-5xl font-bold text-noble">HOY POR SOLO: $6.90 USD</p>
+            <a
+              href="#"
+              class="cta-pulse mt-8 inline-flex w-full items-center justify-center rounded-full bg-skydeep px-8 py-4 text-xs sm:text-sm font-bold uppercase tracking-wide text-white shadow-soft transition hover:bg-sky-600 sm:w-auto"
+            >
+              ¡SÍ! QUIERO EL CÓDIGO DIVINO AHORA
+            </a>
+            <p class="mt-4 text-sm text-slate-500">Oferta por tiempo limitado.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="max-w-5xl mx-auto px-5 sm:px-6 py-14 sm:py-16">
+          <div class="grid gap-8 lg:grid-cols-[auto,1fr] lg:items-center">
+            <div class="flex items-center justify-center">
+              <div class="h-40 w-40 rounded-full border-4 border-noble/70 bg-mist flex items-center justify-center text-center text-sm font-semibold text-ink">
+                Sello 7 días
+              </div>
+            </div>
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-display text-ink">Garantía de Satisfacción 100%</h2>
+              <p class="mt-4 text-base sm:text-lg text-slate-600">
+                Tienes 7 días para probar. Si no sientes ninguna mejora en tu vida espiritual, te devolveremos el 100% de tu dinero. El riesgo es nuestro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
